@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SICHOU 丝绸 — Веб-Меню</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght=300;400;500;600&display=swap');
+        
+        .font-brand { font-family: 'Cinzel', serif; }
+        .font-main { font-family: 'Inter', sans-serif; }
+        
+        /* Скрываем полосу прокрутки, но оставляем возможность листать пальцем */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-[#fcf8eb] text-[#111111] font-main min-h-screen pb-16 antialiased">
+
+    <div id="welcome-screen" class="fixed inset-0 bg-[#FDFBF7] z-[100] flex flex-col justify-between p-8 transition-all duration-700 ease-in-out">
+        <div class="flex justify-end gap-4 text-xs tracking-widest text-[#71717A] font-medium">
+            <button data-lang="ru" class="welcome-lang-btn text-[#111111] font-bold cursor-pointer">RU</button>
+            <button data-lang="kz" class="welcome-lang-btn hover:text-[#111111] cursor-pointer">KZ</button>
+            <button data-lang="en" class="welcome-lang-btn hover:text-[#111111] cursor-pointer">EN</button>
+        </div>
+
+        <div class="max-w-md mx-auto text-center space-y-8 my-auto">
+            <div class="space-y-1">
+                <h1 class="font-brand text-4xl font-medium tracking-[0.2em] text-[#111111]">SICHOU</h1>
+                <p class="text-xs text-[#71717A] tracking-[0.5em] uppercase font-light">丝绸</p>
+            </div>
+            
+            <div class="space-y-4 px-4">
+                <p class="text-xs text-[#71717A] tracking-wide leading-relaxed italic font-light">
+                    紫禁城外,一席京宴...
+                </p>
+                <div class="w-8 h-[1px] bg-[#111111]/10 mx-auto"></div>
+                <p id="welcome-text" class="text-sm text-[#111111] leading-relaxed font-light tracking-wide px-2">
+                    </p>
+            </div>
+        </div>
+
+        <div class="text-center pb-6">
+            <button id="close-welcome" class="text-xs uppercase tracking-[0.3em] font-medium text-[#111111] border-b border-[#111111] pb-1 hover:text-[#71717A] hover:border-[#71717A] transition-colors cursor-pointer">
+                Смотреть меню / Менюні көру
+            </button>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 bg-[#fcf8eb]/95 backdrop-blur-md z-50 border-b border-[#111111]/10 shadow-sm">
+        <div class="max-w-md mx-auto px-6 pt-5 pb-3">
+            
+            <div class="flex justify-between items-baseline mb-5">
+                <div class="flex flex-col">
+                    <span class="font-brand text-2xl font-medium tracking-[0.25em] text-[#111111]">SICHOU</span>
+                    <span class="text-[10px] text-[#71717A] tracking-[0.4em] uppercase font-light -mt-0.5">丝绸</span>
+                </div>
+                
+                <div class="flex gap-4 text-xs tracking-widest text-[#71717A] font-medium">
+                    <button data-lang="ru" class="lang-btn transition-colors text-[#111111] font-bold focus:outline-none cursor-pointer">RU</button>
+                    <button data-lang="kz" class="lang-btn transition-colors hover:text-[#111111] focus:outline-none cursor-pointer">KZ</button>
+                    <button data-lang="en" class="lang-btn transition-colors hover:text-[#111111] focus:outline-none cursor-pointer">EN</button>
+                </div>
+            </div>
+
+            <nav id="categories-nav" class="flex gap-6 overflow-x-auto no-scrollbar py-1 border-t border-[#111111]/10 pt-3 scroll-smooth">
+                </nav>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-6 mt-36">
+        
+        <div id="menu-container" class="space-y-10">
+            </div>
+
+        <footer class="mt-20 pt-8 border-t border-[#111111]/10 text-center space-y-5">
+            <div class="space-y-1">
+                <p id="footer-hours-title" class="text-[10px] uppercase tracking-[0.2em] text-[#111111]/60">Часы работы</p>
+                <p id="footer-hours" class="text-xs text-[#444444] leading-relaxed"></p>
+            </div>
+            
+            <p id="footer-allergy" class="text-[11px] text-[#555555] italic max-w-[280px] mx-auto leading-relaxed font-light"></p>
+            
+            <div class="pt-1">
+                <span id="footer-service" class="text-[11px] tracking-widest text-[#111111] bg-[#111111]/5 px-4 py-2 rounded border border-[#111111]/10 font-medium"></span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
