@@ -9,7 +9,7 @@ const localization = {
         hoursTitle: "Часы работы",
         hours: "Вторник - Воскресенье<br>с 12:00 до 14:30<br>с 18:00 до 22:30",
         allergy: "Если у вас есть аллергия или непереносимость ингредиентов, сообщите об этом персоналу.",
-        service: "Обслуживание 15%"
+        service: "Обслуживание: 15%"
     },
     kz: {
         welcomeText: "Тыйым салынған қала қабырғаларының сыртындағы — талғампаз бейжің дастарқаны. Жаңа Бейжің мейрамханасы — бұл Бейжің мен Шаньдунның гастрономиялық мұрасының жаңа дәуір тұрғысынан заманауи пайымдалуы. Біз астаналық асхана дәстүрлерін ұқыпты зерттей отырып, әр кезеңнің таңдаулы дәмдерін жинап, оларды мына философия арқылы ұсынамыз: Жаңа дәуір. Жаңа Бейжің. Жаңа гастрономия. Өнерді, қала мәдениетін және шығыс қонақжайлылығын ұштастыра отырып, біз қазіргі Бейжің рухын бейнелейтін асхананы қалыптастырамыз.",
@@ -17,7 +17,7 @@ const localization = {
         hoursTitle: "Жұмыс уақыты",
         hours: "Сейсенбі - Жексенбі<br>12:00-ден 14:30-ға дейін<br>18:00-ден 22:30-ға дейін",
         allergy: "Егер сізде тағам компоненттеріне аллергия немесе төзімсіздік болса, бұл туралы қызметкерлерге хабарлаңыз.",
-        service: "Қызмет көрсету - 15%"
+        service: "Қызмет көрсету: 15%"
     },
     en: {
         welcomeText: "Beyond the walls of the Forbidden City — an exquisite Beijing table. New Peking Cuisine is a contemporary interpretation of the gastronomic heritage of Beijing and Shandong, reimagined through the lens of a new era. We carefully explore the traditions of the capital's cuisine, bringing together the iconic flavors of different times and presenting them through the philosophy: A New Era. A New Beijing. A New Gastronomy. Blending art, urban culture, and Eastern hospitality, we create a cuisine that reflects the spirit of modern Beijing.",
@@ -25,7 +25,7 @@ const localization = {
         hoursTitle: "Operational Hours",
         hours: "Tuesday - Sunday<br>12:00 to 14:30<br>18:00 to 22:30",
         allergy: "If you have any allergies, please inform your server.",
-        service: "Service fee - 15%"
+        service: "Service fee: 15%"
     }
 };
 
