@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="kz" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,13 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-[#fcf8eb] text-[#111111] font-main min-h-screen pb-16 antialiased">
+<body class="bg-[#fcf8eb] text-[#111111] font-main min-h-screen pb-16 antialiased overflow-hidden">
 
-    <div id="welcome-screen" class="fixed inset-0 bg-[#FDFBF7] z-[100] flex flex-col justify-between p-8 transition-all duration-700 ease-in-out">
+    <div id="welcome-screen" class="fixed top-0 left-0 w-full bg-[#FDFBF7] z-50 flex flex-col justify-between p-8 transition-transform duration-700 ease-in-out" style="height: 100vh; height: 100dvh;">
         <div class="flex justify-end gap-4 text-xs tracking-widest text-[#71717A] font-medium">
-            <button data-lang="ru" class="welcome-lang-btn text-[#111111] font-bold cursor-pointer">RU</button>
-            <button data-lang="kz" class="welcome-lang-btn hover:text-[#111111] cursor-pointer">KZ</button>
+            <button data-lang="kz" class="welcome-lang-btn text-[#111111] font-bold cursor-pointer">KZ</button>
+            <button data-lang="ru" class="welcome-lang-btn hover:text-[#111111] cursor-pointer">RU</button>
+            <button data-lang="zh" class="welcome-lang-btn hover:text-[#111111] cursor-pointer">中文</button>
             <button data-lang="en" class="welcome-lang-btn hover:text-[#111111] cursor-pointer">EN</button>
         </div>
 
@@ -35,8 +36,7 @@
                     紫禁城外,一席京宴...
                 </p>
                 <div class="w-8 h-[1px] bg-[#111111]/10 mx-auto"></div>
-                <p id="welcome-text" class="text-sm text-[#111111] leading-relaxed font-light tracking-wide px-2">
-                    </p>
+                <p id="welcome-text" class="text-sm text-[#111111] leading-relaxed font-light tracking-wide px-2"></p>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <header class="fixed top-0 left-0 right-0 bg-[#fcf8eb]/95 backdrop-blur-md z-50 border-b border-[#111111]/10 shadow-sm">
+    <header class="fixed top-0 left-0 w-full bg-[#fcf8eb] z-40 border-b border-[#111111]/10 shadow-sm">
         <div class="max-w-md mx-auto px-6 pt-5 pb-3">
             
             <div class="flex justify-between items-center mb-5">
@@ -56,25 +56,28 @@
                 </div>
                 
                 <div class="flex gap-4 text-xs tracking-widest text-[#71717A] font-medium">
-                    <button data-lang="ru" class="lang-btn transition-colors text-[#111111] font-bold focus:outline-none cursor-pointer">RU</button>
-                    <button data-lang="kz" class="lang-btn transition-colors hover:text-[#111111] focus:outline-none cursor-pointer">KZ</button>
+                    <button data-lang="kz" class="lang-btn transition-colors text-[#111111] font-bold focus:outline-none cursor-pointer">KZ</button>
+                    <button data-lang="ru" class="lang-btn transition-colors hover:text-[#111111] focus:outline-none cursor-pointer">RU</button>
+                    <button data-lang="zh" class="lang-btn transition-colors hover:text-[#111111] focus:outline-none cursor-pointer">中文</button>
                     <button data-lang="en" class="lang-btn transition-colors hover:text-[#111111] focus:outline-none cursor-pointer">EN</button>
                 </div>
             </div>
 
-            <nav id="categories-nav" class="flex gap-6 overflow-x-auto no-scrollbar py-1 border-t border-[#111111]/10 pt-3 scroll-smooth">
-                </nav>
+            <div class="border-t border-[#111111]/10 pt-3">
+                <div class="relative w-full">
+                    <nav id="categories-nav" class="flex gap-6 overflow-x-auto no-scrollbar pb-1 scroll-smooth pr-8"></nav>
+                    <div class="absolute right-[-24px] top-0 bottom-0 w-16 bg-gradient-to-l from-[#fcf8eb] to-transparent pointer-events-none"></div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="max-w-md mx-auto px-6 mt-36">
-        
-        <div id="menu-container" class="space-y-10">
-            </div>
+        <div id="menu-container" class="space-y-10"></div>
 
         <footer class="mt-20 pt-8 border-t border-[#111111]/10 text-center space-y-5">
             <div class="space-y-1">
-                <p id="footer-hours-title" class="text-[10px] uppercase tracking-[0.2em] text-[#111111]/60">Часы работы</p>
+                <p id="footer-hours-title" class="text-[10px] uppercase tracking-[0.2em] text-[#111111]/60"></p>
                 <p id="footer-hours" class="text-xs text-[#444444] leading-relaxed"></p>
             </div>
             
