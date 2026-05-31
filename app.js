@@ -96,18 +96,12 @@ function setupWelcomeScreen() {
     
     closeBtn?.addEventListener('click', () => {
         if (welcomeScreen) {
-            // Разблокируем скролл основной страницы
-            document.body.classList.remove('overflow-hidden');
-            
-            // Отключаем плавность для прыжка наверх
-            document.documentElement.classList.remove('scroll-smooth');
-            window.scrollTo(0, 0);
-            
-            // Возвращаем плавность
-            setTimeout(() => {
-                document.documentElement.classList.add('scroll-smooth');
-            }, 50);
+            // СНИМАЕМ ЖЕСТКУЮ БЛОКИРОВКУ СО СТРАНИЦЫ
+            document.body.style.overflow = '';
+            document.body.style.height = '';
+            document.body.style.touchAction = '';
 
+            // Убираем заставку вверх
             welcomeScreen.style.transform = 'translateY(-100%)';
             setTimeout(() => welcomeScreen.remove(), 700);
         }
