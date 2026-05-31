@@ -67,7 +67,6 @@ function setupLanguageButtons() {
         updateLocalization();
     }
 
-    // ИСПРАВЛЕНО: Теперь мы берем язык точно у кнопки (btn.dataset.lang), а не у места касания пальцем
     mainButtons.forEach(btn => {
         btn.addEventListener('click', () => handleLangChange(btn.dataset.lang));
     });
@@ -97,11 +96,14 @@ function setupWelcomeScreen() {
     
     closeBtn?.addEventListener('click', () => {
         if (welcomeScreen) {
-            // Временно отключаем плавный скролл для моментального прыжка наверх страницы
+            // Разблокируем скролл основной страницы
+            document.body.classList.remove('overflow-hidden');
+            
+            // Отключаем плавность для прыжка наверх
             document.documentElement.classList.remove('scroll-smooth');
             window.scrollTo(0, 0);
             
-            // Возвращаем плавный скролл для работы верхнего меню
+            // Возвращаем плавность
             setTimeout(() => {
                 document.documentElement.classList.add('scroll-smooth');
             }, 50);
