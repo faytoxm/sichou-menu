@@ -11,16 +11,13 @@
         .font-brand { font-family: 'Cinzel', serif; }
         .font-main { font-family: 'Inter', sans-serif; }
         
-        /* Скрываем полосу прокрутки, но оставляем возможность листать пальцем */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<!-- Добавлен класс overflow-hidden для блокировки скролла на старте -->
-<body class="bg-[#fcf8eb] text-[#111111] font-main min-h-screen pb-16 antialiased overflow-hidden">
+<body class="bg-[#fcf8eb] text-[#111111] font-main min-h-screen pb-16 antialiased" style="overflow: hidden; height: 100dvh; touch-action: none;">
 
-    <!-- Заставка: добавлен класс touch-none для полной блокировки свайпов -->
-    <div id="welcome-screen" class="fixed top-0 left-0 w-full bg-[#FDFBF7] z-50 flex flex-col justify-between p-8 transition-transform duration-700 ease-in-out touch-none" style="height: 100vh; height: 100dvh;">
+    <div id="welcome-screen" class="fixed top-0 left-0 w-full bg-[#FDFBF7] z-50 flex flex-col justify-between p-8 transition-transform duration-700 ease-in-out" style="height: 100vh; height: 100dvh;">
         <div class="flex justify-end gap-4 text-xs tracking-widest text-[#71717A] font-medium">
             <button data-lang="kz" class="welcome-lang-btn text-[#111111] font-bold cursor-pointer">KZ</button>
             <button data-lang="ru" class="welcome-lang-btn hover:text-[#111111] cursor-pointer">RU</button>
@@ -49,7 +46,6 @@
         </div>
     </div>
 
-    <!-- Шапка: z-40 -->
     <header class="fixed top-0 left-0 w-full bg-[#fcf8eb] z-40 border-b border-[#111111]/10 shadow-sm">
         <div class="max-w-md mx-auto px-6 pt-5 pb-3">
             
